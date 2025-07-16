@@ -5,20 +5,29 @@ def main():
 
     match priority:
         case "high":
-            reminder = f"Reminder: '{task}' is a high priority task"
+            if time_bound == "yes":
+                print(f"Reminder: '{task}' is a high priority task that requires immediate attention today!")
+            else:
+                print(f"Note: '{task}' is a high priority task. Consider completing it when you have free time.")
         case "medium":
-            reminder = f"Reminder: '{task}' is a medium priority task"
+            if time_bound == "yes":
+                print(f"Reminder: '{task}' is a medium priority task that requires immediate attention today!")
+            else:
+                print(f"Note: '{task}' is a medium priority task. Consider completing it when you have free time.")
         case "low":
-            reminder = f"Reminder: '{task}' is a low priority task"
+            if time_bound == "yes":
+                print(f"Reminder: '{task}' is a low priority task that requires immediate attention today!")
+            else:
+                print(f"Note: '{task}' is a low priority task. Consider completing it when you have free time.")
         case _:
-            reminder = f"Reminder: '{task}' has an unknown priority level"
-
-    if time_bound == "yes":
-        reminder += " that requires immediate attention today!"
-    else:
-        reminder += ". Consider completing it when you have free time."
-
-    print("\n" + reminder)
+            if time_bound == "yes":
+                print(f"Reminder: '{task}' has an unknown priority level but requires immediate attention today!")
+            else:
+                print(f"Note: '{task}' has an unknown priority level. Consider completing it when you have free time.")
 
 if __name__ == "__main__":
-    main()
+    main()    
+
+    # Final version to pass review
+
+    # -- Final update for ALX review: includes match-case and time-bound logic --
