@@ -7,10 +7,8 @@ def display_menu():
 
 def main():
     shopping_list = []  # This is the array/list
-
     while True:
         display_menu()  # Calling the function
-
         try:
             choice = int(input("Enter your choice: "))  # Choice input as a number
         except ValueError:
