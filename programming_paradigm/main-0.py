@@ -2,8 +2,14 @@ import sys
 from bank_account import BankAccount
 
 def main():
-    account = BankAccount(100)
-
+    """
+    Main function to handle command line banking operations.
+    
+    Usage: python main-0.py <command>:<amount>
+    Commands: deposit, withdraw, display
+    """
+    account = BankAccount(100)  # Example starting balance
+    
     if len(sys.argv) < 2:
         print("Usage: python main-0.py <command>:<amount>")
         print("Commands: deposit, withdraw, display")
